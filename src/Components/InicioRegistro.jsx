@@ -11,7 +11,7 @@ const InicioRegistro = () => {
    const loginWithCredentials = async (email, password) => {
       try {
          const resp = await signInWithEmailAndPassword(auth, email, password);
-         console.log(resp.user.uid);
+         console.log(resp.user);
       } catch (e) {
          console.log(e);
       }
@@ -24,7 +24,7 @@ const InicioRegistro = () => {
                <form onSubmit={handleSubmit(onSubmit)}>
                   <input {...register("user")} placeholder="User" />
                   <input {...register("pass")} placeholder="Password" />
-                  <input type="submit" />
+                  <input className="inputFormIniciarSesion" type="submit" />
                </form>
             </div>
          </div>
